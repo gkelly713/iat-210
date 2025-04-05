@@ -16,20 +16,13 @@ interface ReferenceListProps {
 
 const ReferenceList: React.FC<ReferenceListProps> = ({ references }) => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       {references.map((ref) => (
-        <div key={ref.id} className="pl-8 -indent-8 text-sm">
+        <div key={ref.id} className="pl-10 -indent-8 text-sm">
           <p>
-            {ref.author} ({ref.year}). <em>{ref.title}</em>. {ref.source}.
+            {ref.author} ({ref.year}). {ref.title}. {ref.source}.
             {ref.url && (
-              <> Available at: <a 
-                href={ref.url} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary hover:underline break-words"
-              >
-                {ref.url}
-              </a></>
+              <> {ref.url}</>
             )}
           </p>
         </div>

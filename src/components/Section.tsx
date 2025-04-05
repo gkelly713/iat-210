@@ -7,10 +7,11 @@ interface SectionProps extends React.HTMLAttributes<HTMLDivElement> {
   id: string;
   children: React.ReactNode;
   index: number;
+  isReferences?: boolean;
 }
 
 const Section = forwardRef<HTMLDivElement, SectionProps>(
-  ({ title, id, children, index, className, ...props }, ref) => {
+  ({ title, id, children, index, isReferences = false, className, ...props }, ref) => {
     return (
       <section
         id={id}
@@ -22,9 +23,15 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
         )}
         {...props}
       >
-        <div className="container max-w-4xl mx-auto px-4 sm:px-6">
+        <div className={cn("container max-w-4xl mx-auto px-4 sm:px-6", 
+          isReferences ? "max-w-5xl" : "")}>
           <h2 className="text-3xl font-bold mb-6 text-primary animate-fade-in">{title}</h2>
-          <div className="animate-slide-up">{children}</div>
+          <div className={cn(
+            "animate-slide-up",
+            isReferences ? "" : "prose prose-slate max-w-none"
+          )}>
+            {children}
+          </div>
         </div>
       </section>
     );
