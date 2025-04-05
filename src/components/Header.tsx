@@ -1,14 +1,23 @@
 
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 interface HeaderProps {
   onNavigate: (sectionId: string) => void;
 }
+
 const Header: React.FC<HeaderProps> = ({
   onNavigate
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
   const sections = [{
     id: "introduction",
     label: "Introduction"
@@ -28,25 +37,40 @@ const Header: React.FC<HeaderProps> = ({
     id: "references",
     label: "References"
   }];
+  
   const handleNavClick = (sectionId: string) => {
     onNavigate(sectionId);
     setMobileMenuOpen(false);
   };
+  
   return <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-slate-200 shadow-sm">
       <div className="container py-4 max-w-4xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
-          <div className="max-w-[80%]">
+          <div className="flex-grow max-w-[90%]">
             <h1 className="text-lg md:text-xl font-bold text-primary">
-              <span className="hidden sm:inline">Beyond Entertainment:</span> How Pokémon Go's AR Design Promotes Mental Health
+              Beyond Entertainment: How Pokémon Go's AR Design Promotes Mental Health
             </h1>
           </div>
           
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
-            {sections.map(section => <button key={section.id} onClick={() => handleNavClick(section.id)} className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">
-                {section.label}
-              </button>)}
-          </nav>
+          {/* Desktop Navigation - Dropdown Menu */}
+          <div className="hidden md:block">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-slate-600 hover:text-primary transition-colors">
+                Sections <ChevronDown className="ml-1 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-white">
+                {sections.map(section => (
+                  <DropdownMenuItem 
+                    key={section.id}
+                    onClick={() => handleNavClick(section.id)}
+                    className="cursor-pointer"
+                  >
+                    {section.label}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
           
           {/* Mobile Menu Button */}
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden p-2 rounded-md text-slate-500 hover:bg-slate-100">
@@ -65,4 +89,5 @@ const Header: React.FC<HeaderProps> = ({
       </div>
     </header>;
 };
+
 export default Header;
