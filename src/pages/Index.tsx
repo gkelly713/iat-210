@@ -1,10 +1,8 @@
-
 import React, { useRef } from 'react';
 import Header from '@/components/Header';
 import Section from '@/components/Section';
 import ImageDisplay from '@/components/ImageDisplay';
 import ReferenceList from '@/components/ReferenceList';
-
 const Index = () => {
   // References to each section for navigation
   const introRef = useRef<HTMLDivElement>(null);
@@ -122,18 +120,12 @@ const Index = () => {
       });
     }
   };
-  
   return <div className="min-h-screen flex flex-col">
       <Header onNavigate={navigateToSection} />
       
       <main className="flex-grow">
         <Section ref={introRef} id="introduction" title="Introduction" index={0}>
-          <ImageDisplay 
-            src="/lovable-uploads/3018a778-b726-4d24-a066-a82b71941578.png" 
-            alt="Pokemon Go gameplay showing a Fennekin in a grassy field with a Pokeball" 
-            position="right" 
-            size="medium" 
-          />
+          <ImageDisplay src="/lovable-uploads/3018a778-b726-4d24-a066-a82b71941578.png" alt="Pokemon Go gameplay showing a Fennekin in a grassy field with a Pokeball" position="right" size="medium" />
           
           <p className="mb-4">
             In recent years, augmented reality (AR) technologies have experienced remarkable growth and adoption, particularly within the mobile gaming sector. By overlaying digital content onto the physical world, AR has transformed how people interact with their surroundings through technology. This technological advancement has not only revolutionized entertainment but has also revealed promising applications for mental health and well-being.
@@ -143,16 +135,11 @@ const Index = () => {
             Among the most successful implementations of AR in gaming, Pokémon Go stands as a groundbreaking example that has captured worldwide attention since its 2016 launch. While celebrated for its nostalgic appeal, researchers and health professionals have recognized its potential benefits beyond mere entertainment.
           </p>
 
-          <p>Pokémon Go uses augmented reality to promote mental health through key game design elements—such as game worlds, wayfinding, and progression—demonstrating how augmented reality can better serve as a tool for improving well-being compared to virtual reality. While virtual realities are becoming increasingly popular, they are equipment heavy, fairly stationary, and can not simulate the social connectivity that augmented realities are capable of. Augmented reality offers valuable insights into creating digital experiences that enhance rather than detract from mental health and well-being.</p>
+          <p>Pokémon Go uses AR to promote mental health through key game design elements—such as game worlds, wayfinding, and progression—demonstrating how augmented reality can better serve as a tool for improving well-being compared to virtual reality. While virtual realities are becoming increasingly popular, they are equipment heavy, fairly stationary, and can not simulate the social connectivity that augmented realities are capable of. Augmented reality offers valuable insights into creating digital experiences that enhance rather than detract from mental health and well-being.</p>
         </Section>
         
         <Section ref={gameWorldRef} id="game-world" title="Game World" index={1}>
-          <ImageDisplay 
-            src="/lovable-uploads/c01c6dc5-d317-4cbc-96eb-6bb086611945.png" 
-            alt="Pokemon Go map view showing game world with PokéStops and Pokemon" 
-            position="left" 
-            size="medium" 
-          />
+          <ImageDisplay src="/lovable-uploads/c01c6dc5-d317-4cbc-96eb-6bb086611945.png" alt="Pokemon Go map view showing game world with PokéStops and Pokemon" position="left" size="medium" />
           
           <p className="mb-4">
             Game world is a term used to define a virtual environment where a game occurs (Filimowicz, 2025). What distinguishes Pokémon Go from standard video games is the fact that its game world is a reflection of our physical world. Immediately after launching the application, Pokémon Go asks for the player's location which is critical since the game world is literally based on real Earth geography derived from Google Maps. The game integrates game elements into the real-world map. When examining the in-game map, players observe a proportional and to-scale representation of their surroundings, similar to having a standard map application open, but enhanced with game elements. This blend of real experiences and technologies is one that is suggested by researcher James Gee, to promote health, socializing, and collaboration. (Cortés & Kessner, 2023)
@@ -180,12 +167,7 @@ const Index = () => {
             Wayfinding is the "process by which players navigate and orient themselves within the game environment" (Filimowicz, 2025). In Pokémon Go, this concept takes on unique significance because it offers a digital gaming experience that requires physical movement in the real world.
           </p>
           
-          <ImageDisplay 
-            src="/lovable-uploads/239535e1-e241-46aa-bec3-640675e72a29.png" 
-            alt="Pokemon Go PokeStop showing Langley City Sign at Newlands" 
-            position="right" 
-            size="medium" 
-          />
+          <ImageDisplay src="/lovable-uploads/239535e1-e241-46aa-bec3-640675e72a29.png" alt="Pokemon Go PokeStop showing Langley City Sign at Newlands" position="right" size="medium" />
           
           <p className="mb-4">
             Unlike traditional video games, where navigation occurs through input or keyboard commands, wayfinding in Pokémon GO manifests through real physical movement. Since Pokémon are spread all over the game world, players must physically travel to different places to gather these digital creatures. This fundamental design choice merges digital exploration with physical activity, creating a distinct gaming experience that encourages movement outside the boundaries of specific sedentary games (i.e., your living room when using VR).
@@ -213,12 +195,7 @@ const Index = () => {
             Progression refers to the sense of advancement and achievement players experience as they move through the content of a game. Pokémon Go offers a unique approach to progress by allowing players to advance in many ways. The most prominent progression element is environmental progression, "when a game's plot involves exploration in a way that's both interesting and pleasurable" (Filimowicz, 2025). Environmental progression is identified as walking X amount of kilometres, collecting X amount of Pokémon, using X amount of power ups etc. However, the aspect of progression that has significant influence on wellbeing is the actions available to players - those actions being raid battles.
           </p>
           
-          <ImageDisplay 
-            src="/lovable-uploads/97f59685-fff5-47b7-a1ff-e9329db6ae81.png" 
-            alt="Pokemon Go raid battle showing a pink Pokemon in a gym arena" 
-            position="left" 
-            size="medium" 
-          />
+          <ImageDisplay src="/lovable-uploads/97f59685-fff5-47b7-a1ff-e9329db6ae81.png" alt="Pokemon Go raid battle showing a pink Pokemon in a gym arena" position="left" size="medium" />
           
           <p className="mb-4">
             Unlike individual achievement systems in traditional games, raid battles are designed as collaborative challenges that encourage community engagement. In Raid battles, "opponent[s are] more difficult to defeat than most other Pokémon. The higher the difficulty, the stronger the Raid Boss and the more players you'll need in order to succeed" (What Are Raid Battles? — Pokémon GO Help Center, n.d.). This design element transforms progress from an individual experience into a social one, where advancement depends on collaboration and cooperation with one's local community. The mechanics of raid battles deliberately facilitate social interaction face-to-face. Players can participate by earning raid passes through regular gameplay and then responding to notifications about nearby raid battles. When notified, players have options: They can physically travel to the place to join the match or they can accept remote invitations from other players. While the remote option provides flexibility, the game provides additional bonuses for in-person participation, subtly encouraging face-to-face engagement when possible.
@@ -235,12 +212,7 @@ const Index = () => {
         </Section>
         
         <Section ref={conclusionRef} id="conclusion" title="Conclusion" index={4}>
-          <ImageDisplay 
-            src="/lovable-uploads/22163409-d2ff-4246-9227-69c7ec27188e.png" 
-            alt="Pokemon Go achievements and quest progression screen" 
-            position="center" 
-            size="medium" 
-          />
+          <ImageDisplay src="/lovable-uploads/22163409-d2ff-4246-9227-69c7ec27188e.png" alt="Pokemon Go achievements and quest progression screen" position="center" size="medium" />
           
           <p>
             Pokémon Go demonstrates how augmented reality can enhance mental health and well-being by blending digital experiences with physical reality. Through its innovative game world design, movement-based wayfinding, and socially-oriented progression system, it provides a great contrast to virtual reality's potential for harmful detachment. By encouraging experiences, physical activity and face-to-face social interaction, Pokémon Go creates a hybrid experience that offers the psychological benefits of escapism while maintaining connection to the real world. This balanced approach offers valuable insights for those seeking to create digital experiences that support rather than detract from mental wellbeing in our increasingly technology-driven society.
@@ -261,5 +233,4 @@ const Index = () => {
       </footer>
     </div>;
 };
-
 export default Index;
