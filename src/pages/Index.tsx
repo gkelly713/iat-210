@@ -129,14 +129,14 @@ const Index = () => {
           <ImageDisplay src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800" alt="A person holding a smartphone while outdoors, suggesting AR gaming" position="right" size="medium" />
           
           <p className="mb-4">
-            In recent years, AR technologies have experienced remarkable growth and adoption, particularly within the mobile gaming sector. By overlaying digital content onto the physical world, AR has transformed how people interact with their surroundings through technology. This technological advancement has not only revolutionized entertainment but has also revealed promising applications for mental health and well-being.
+            In recent years, augmented reality (AR) technologies have experienced remarkable growth and adoption, particularly within the mobile gaming sector. By overlaying digital content onto the physical world, AR has transformed how people interact with their surroundings through technology. This technological advancement has not only revolutionized entertainment but has also revealed promising applications for mental health and well-being.
           </p>
 
           <p className="mb-4">
             Among the most successful implementations of AR in gaming, Pokémon Go stands as a groundbreaking example that has captured worldwide attention since its 2016 launch. While celebrated for its nostalgic appeal, researchers and health professionals have recognized its potential benefits beyond mere entertainment.
           </p>
 
-          <p>Pokémon Go uses AR to promote mental health through key game design elements—such as game worlds, wayfinding, and progression—demonstrating how AR can better serve as a tool for improving well-being compared to VR. While VRs are becoming increasingly popular, they are equipment heavy, fairly stationary, and can not simulate the social connectivity that ARs are capable of. AR offers valuable insights into creating digital experiences that enhance rather than detract from mental health and well-being.</p>
+          <p><strong>Pokémon Go uses AR to promote mental health through key game design elements—such as game worlds, wayfinding, and progression—demonstrating how AR can better serve as a tool for improving well-being compared to virtual reality (VR).</strong> While VRs are becoming increasingly popular, they are equipment heavy, fairly stationary, and can not simulate the social connectivity that ARs are capable of. AR offers valuable insights into creating digital experiences that enhance rather than detract from mental health and well-being.</p>
         </Section>
         
         <Section ref={gameWorldRef} id="game-world" title="Game World" index={1}>
