@@ -47,8 +47,8 @@ const Header: React.FC<HeaderProps> = ({
       <div className="container py-4 max-w-4xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
           <div className="flex-grow max-w-[90%]">
-            <h1 className="text-lg md:text-xl font-bold text-primary">
-              <span className="hidden sm:inline">Beyond Entertainment:</span> How Pokémon Go's AR Design Promotes Mental Health
+            <h1 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-primary leading-tight">
+              Beyond Entertainment: How Pokémon Go's Augmented Reality Design Promotes Mental Health and Well-being in the Digital Age
             </h1>
           </div>
           
