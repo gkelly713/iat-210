@@ -133,7 +133,7 @@ const Index = () => {
             Among the most successful implementations of AR in gaming, Pokémon Go stands as a groundbreaking example that has captured worldwide attention since its 2016 launch. While celebrated for its nostalgic appeal, researchers and health professionals have recognized its potential benefits beyond mere entertainment.
           </p>
 
-          <p>Pokémon Go uses AR to promote mental health through key game design elements—such as game worlds, wayfinding, and progression—demonstrating how augmented reality can better serve as a tool for improving well-being compared to virtual reality. While virtual realities are becoming increasingly popular, they are equipment heavy, fairly stationary, and can not simulate the social connectivity that augmented realities are capable of. Augmented reality offers valuable insights into creating digital experiences that enhance rather than detract from mental health and well-being.</p>
+          <p>From a technical perspective, Pokémon Go uses a 2.5 dimensional approach in their game world, similar to other AR games. The base map interface runs in the 2D mode and gives an aerial view of the player's location. But when players encounter a Pokémon, the view shifts to 3D which allows a greater blending of the real world and computer generated creatures captured by the camera in the player's device.</p>
         </Section>
         
         <Section ref={gameWorldRef} id="game-world" title="Game World" index={1}>
