@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils';
 interface ImageDisplayProps {
   src: string;
   alt: string;
-  caption?: string;
   position?: 'left' | 'right' | 'center';
   size?: 'small' | 'medium' | 'large';
   className?: string;
