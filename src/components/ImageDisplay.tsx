@@ -14,7 +14,6 @@ interface ImageDisplayProps {
 const ImageDisplay: React.FC<ImageDisplayProps> = ({
   src,
   alt,
-  caption,
   position = 'center',
   size = 'medium',
   className
@@ -43,11 +42,6 @@ const ImageDisplay: React.FC<ImageDisplayProps> = ({
         alt={alt}
         className="w-full h-auto object-cover"
       />
-      {caption && (
-        <figcaption className="p-3 bg-slate-50 text-sm text-slate-600 italic">
-          {caption}
-        </figcaption>
-      )}
     </figure>
   );
 };
