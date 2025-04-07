@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import Header from '@/components/Header';
 import Section from '@/components/Section';
@@ -143,7 +142,7 @@ const Index = () => {
       <main className="flex-grow">
         <Section ref={introRef} id="introduction" title="Introduction" index={0}>
           <ImageDisplay 
-            src="public/lovable-uploads/f73023b3-a174-4714-9169-96adaba5b55e.png" 
+            src="/lovable-uploads/f73023b3-a174-4714-9169-96adaba5b55e.png" 
             alt="Pokémon Go screenshot showing a Fennekin in a grassy area with a Poké Ball" 
             position="right" 
             size="medium" 
@@ -162,7 +161,7 @@ const Index = () => {
         
         <Section ref={gameWorldRef} id="game-world" title="Game World" index={1}>
           <ImageDisplay 
-            src="public/lovable-uploads/e535afda-52d3-46fc-be7e-cab65f3df5d9.png" 
+            src="/lovable-uploads/e535afda-52d3-46fc-be7e-cab65f3df5d9.png" 
             alt="Pokémon Go map view showing a player with nearby Pokémon and PokéStops" 
             position="left" 
             size="medium" 
@@ -193,7 +192,7 @@ const Index = () => {
           </p>
           
           <ImageDisplay 
-            src="public/lovable-uploads/7e213cce-e745-49d5-b384-b657a5f10a27.png" 
+            src="/lovable-uploads/7e213cce-e745-49d5-b384-b657a5f10a27.png" 
             alt="Pokémon Go PokéStop at Langley City Sign landmark showing location-based gameplay" 
             position="right" 
             size="medium" 
@@ -226,7 +225,7 @@ const Index = () => {
           </p>
           
           <ImageDisplay 
-            src="public/lovable-uploads/a474cded-f259-4591-996a-313296b7605d.png" 
+            src="/lovable-uploads/a474cded-f259-4591-996a-313296b7605d.png" 
             alt="Pokémon Go raid battle with Tapu Lele at Iris Mooney Park showing the gym battle interface" 
             position="left" 
             size="medium" 
@@ -248,7 +247,7 @@ const Index = () => {
         
         <Section ref={conclusionRef} id="conclusion" title="Conclusion" index={4}>
           <ImageDisplay 
-            src="public/lovable-uploads/86968564-2e59-4c2b-bf8f-d4beb94711fe.png" 
+            src="/lovable-uploads/86968564-2e59-4c2b-bf8f-d4beb94711fe.png" 
             alt="Pokémon Go quest screen showing progression tasks and rewards" 
             position="center" 
             size="medium" 
