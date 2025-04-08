@@ -14,93 +14,95 @@ const Home = () => {
   const referencesRef = useRef<HTMLDivElement>(null);
 
   // Academic references
-  const references = [{
-    id: "ref1",
-    author: "Althoff, T., White, R. W., & Horvitz, E.",
-    year: "2016",
-    title: "Influence of Pokémon Go on physical activity: study and implications",
-    source: "Journal of Medical Internet Research, 18(12), e315",
-    url: "https://doi.org/10.2196/jmir.6759"
-  }, {
-    id: "ref2",
-    author: "Cortés, L. E. P., & Kessner, T. M.",
-    year: "2023",
-    title: "The Future of Games Scholarship: An interview with James Paul Gee",
-    source: "Games and Culture, 18(7), 907–918",
-    url: "https://doi.org/10.1177/15554120221149277"
-  }, {
-    id: "ref3",
-    author: "Filimowicz, M.",
-    year: "2025",
-    title: "Atmosphere & Progression [Week 8 Material; Canvas Modules]",
-    source: "IAT210 OL01 Introduction to Game Studies: Theory and Design"
-  }, {
-    id: "ref4",
-    author: "Filimowicz, M.",
-    year: "2025",
-    title: "Mapping & Wayfinding [Week 7 Material; Canvas Modules]",
-    source: "IAT210 OL01 Introduction to Game Studies: Theory and Design"
-  }, {
-    id: "ref5",
-    author: "Filimowicz, M.",
-    year: "2025",
-    title: "Game Worlds, Dimensionality & Time [Week 6 Material; Canvas Modules]",
-    source: "IAT210 OL01 Introduction to Game Studies: Theory and Design"
-  }, {
-    id: "ref6",
-    author: "Giardina, A., Schimmenti, A., Starcevic, V., King, D., Blasi, M., & Billieux, J.",
-    year: "2024",
-    title: "Problematic gaming, social withdrawal, and Escapism: The Compensatory-Dissociative Online Gaming (C-DOG) model",
-    source: "Computers in Human Behavior, 155",
-    url: "https://www.sciencedirect.com/science/article/pii/S0747563224000554"
-  }, {
-    id: "ref7",
-    author: "Ly, L.",
-    year: "2016, July 24",
-    title: "Wayfinding and Pokemon Go - Lawrence Ly - Medium",
-    source: "Medium",
-    url: "https://medium.com/@crimsonlaw/wayfinding-and-pokemon-go-ee8a7d4d7ce6"
-  }, {
-    id: "ref8",
-    author: "open world",
-    year: "2025",
-    title: "In Merriam-Webster Dictionary",
-    source: "https://www.merriam-webster.com/dictionary/open%20world#:~:text=noun,game%20environment%20%3A%20sandbox%20sense%202a"
-  }, {
-    id: "ref9",
-    author: "US HealthConnect",
-    year: "2025, January 8",
-    title: "Open-World Video Games Found to Boost Mental Well-Being in Postgraduate students",
-    source: "© 2025",
-    url: "https://reachmd.com/news/open-world-video-games-found-to-boost-mental-well-being-in-postgraduate-students/2470826/"
-  }, {
-    id: "ref10",
-    author: "Vella, K., Johnson, D., Cheng, V. W. S., Davenport, T., Mitchell, J., Klarkowski, M., & Phillips, C.",
-    year: "2017",
-    title: "A sense of belonging: Pokémon GO and social connectedness",
-    source: "Games and Culture, 14(6), 583–603",
-    url: "https://doi.org/10.1177/1555412017719973"
-  }, {
-    id: "ref11",
-    author: "Villanueva, X.",
-    year: "2024, April",
-    title: "Virtual Reality's Threat to Socialization",
-    source: "University of Rochester",
-    url: "https://www.library.rochester.edu/about/news/virtual-realitys-threat-socialization"
-  }, {
-    id: "ref12",
-    author: "What are Raid Battles?",
-    year: "n.d.",
-    title: "Pokémon GO Help Center",
-    source: "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2187-what-are-raid-battles/"
-  }, {
-    id: "ref13",
-    author: "Wheeler, T.",
-    year: "2024, February 28",
-    title: "Mental benefits of walking",
-    source: "WebMD",
-    url: "https://www.webmd.com/fitness-exercise/mental-benefits-of-walking"
-  }];
+  const references = [
+    {
+      id: "ref1",
+      author: "Althoff, T., White, R. W., & Horvitz, E.",
+      year: "2016",
+      title: "Influence of Pokémon Go on physical activity: study and implications",
+      source: "Journal of Medical Internet Research, 18(12), e315",
+      url: "https://doi.org/10.2196/jmir.6759"
+    }, {
+      id: "ref2",
+      author: "Cortés, L. E. P., & Kessner, T. M.",
+      year: "2023",
+      title: "The Future of Games Scholarship: An interview with James Paul Gee",
+      source: "Games and Culture, 18(7), 907–918",
+      url: "https://doi.org/10.1177/15554120221149277"
+    }, {
+      id: "ref3",
+      author: "Filimowicz, M.",
+      year: "2025",
+      title: "Atmosphere & Progression [Week 8 Material; Canvas Modules]",
+      source: "IAT210 OL01 Introduction to Game Studies: Theory and Design"
+    }, {
+      id: "ref4",
+      author: "Filimowicz, M.",
+      year: "2025",
+      title: "Mapping & Wayfinding [Week 7 Material; Canvas Modules]",
+      source: "IAT210 OL01 Introduction to Game Studies: Theory and Design"
+    }, {
+      id: "ref5",
+      author: "Filimowicz, M.",
+      year: "2025",
+      title: "Game Worlds, Dimensionality & Time [Week 6 Material; Canvas Modules]",
+      source: "IAT210 OL01 Introduction to Game Studies: Theory and Design"
+    }, {
+      id: "ref6",
+      author: "Giardina, A., Schimmenti, A., Starcevic, V., King, D., Blasi, M., & Billieux, J.",
+      year: "2024",
+      title: "Problematic gaming, social withdrawal, and Escapism: The Compensatory-Dissociative Online Gaming (C-DOG) model",
+      source: "Computers in Human Behavior, 155",
+      url: "https://www.sciencedirect.com/science/article/pii/S0747563224000554"
+    }, {
+      id: "ref7",
+      author: "Ly, L.",
+      year: "2016, July 24",
+      title: "Wayfinding and Pokemon Go - Lawrence Ly - Medium",
+      source: "Medium",
+      url: "https://medium.com/@crimsonlaw/wayfinding-and-pokemon-go-ee8a7d4d7ce6"
+    }, {
+      id: "ref8",
+      author: "open world",
+      year: "2025",
+      title: "In Merriam-Webster Dictionary",
+      source: "https://www.merriam-webster.com/dictionary/open%20world#:~:text=noun,game%20environment%20%3A%20sandbox%20sense%202a"
+    }, {
+      id: "ref9",
+      author: "US HealthConnect",
+      year: "2025, January 8",
+      title: "Open-World Video Games Found to Boost Mental Well-Being in Postgraduate students",
+      source: "© 2025",
+      url: "https://reachmd.com/news/open-world-video-games-found-to-boost-mental-well-being-in-postgraduate-students/2470826/"
+    }, {
+      id: "ref10",
+      author: "Vella, K., Johnson, D., Cheng, V. W. S., Davenport, T., Mitchell, J., Klarkowski, M., & Phillips, C.",
+      year: "2017",
+      title: "A sense of belonging: Pokémon GO and social connectedness",
+      source: "Games and Culture, 14(6), 583–603",
+      url: "https://doi.org/10.1177/1555412017719973"
+    }, {
+      id: "ref11",
+      author: "Villanueva, X.",
+      year: "2024, April",
+      title: "Virtual Reality's Threat to Socialization",
+      source: "University of Rochester",
+      url: "https://www.library.rochester.edu/about/news/virtual-realitys-threat-socialization"
+    }, {
+      id: "ref12",
+      author: "What are Raid Battles?",
+      year: "n.d.",
+      title: "Pokémon GO Help Center",
+      source: "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2187-what-are-raid-battles/"
+    }, {
+      id: "ref13",
+      author: "Wheeler, T.",
+      year: "2024, February 28",
+      title: "Mental benefits of walking",
+      source: "WebMD",
+      url: "https://www.webmd.com/fitness-exercise/mental-benefits-of-walking"
+    }
+  ];
 
   // Function to scroll to section
   const navigateToSection = (sectionId: string) => {
@@ -129,15 +131,7 @@ const Home = () => {
         <Section ref={introRef} id="introduction" title="Introduction" index={0}>
           <ImageDisplay src="/lovable-uploads/f73023b3-a174-4714-9169-96adaba5b55e.png" alt="Pokémon Go screenshot showing a Fennekin in a grassy area with a Poké Ball" position="right" size="medium" />
           
-<<<<<<< HEAD
-          <p><strong>In recent years, AR technologies have experienced remarkable growth and adoption, particularly within the mobile gaming sector. By overlaying digital content onto the physical world, AR has transformed how people interact with their surroundings through technology. This technological advancement has not only revolutionized entertainment but has also revealed promising applications for mental health and well-being. Among the most successful implementations of AR in gaming, Pokémon Go (2016) stands as a groundbreaking example that has captured worldwide attention since its 2016 launch. While celebrated for its nostalgic appeal, researchers and health professionals have recognized its potential benefits beyond mere entertainment. </strong> Pokémon Go uses AR to promote mental health through key game design elements—such as game worlds, wayfinding, and progression—demonstrating how AR can better serve as a tool for improving well-being compared to VR. </strong> While VRs are becoming increasingly popular, they are equipment heavy, fairly stationary, and can not simulate the social connectivity that ARs are capable of. AR offers valuable insights into creating digital experiences that enhance rather than detract from mental health and well-being.</p>
-
-          
-
-          
-=======
           <p className="mb-4 text-lg">In recent years, AR technologies have experienced remarkable growth and adoption, particularly within the mobile gaming sector. By overlaying digital content onto the physical world, AR has transformed how people interact with their surroundings through technology. This technological advancement has not only revolutionized entertainment but has also revealed promising applications for mental health and well-being. Among the most successful implementations of AR in gaming, Pokémon Go (2016) stands as a groundbreaking example that has captured worldwide attention since its 2016 launch. While celebrated for its nostalgic appeal, researchers and health professionals have recognized its potential benefits beyond mere entertainment. <span className="font-bold">Pokémon Go uses AR to promote mental health through key game design elements—such as game worlds, wayfinding, and progression—demonstrating how AR can better serve as a tool for improving well-being compared to VR.</span> While VRs are becoming increasingly popular, they are equipment heavy, fairly stationary, and can not simulate the social connectivity that ARs are capable of. AR offers valuable insights into creating digital experiences that enhance rather than detract from mental health and well-being.</p>
->>>>>>> c6bd5a2d8724c35b37ae01c4bdfba7ce7eb1364c
         </Section>
         
         <Section ref={gameWorldRef} id="game-world" title="Game World" index={1}>
